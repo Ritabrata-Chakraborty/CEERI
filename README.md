@@ -45,6 +45,3 @@ This project includes various post-processing techniques to enhance object detec
 - [ ] Improve Kalman filter tuning for smoother tracking.
 - [ ] Add support for multi-object tracking.
 - [ ] Optimize inference speed using TensorRT.
-
-## Contributing
-Contributions are welcome! Feel free to fork this repository, submit issues, or create pull requests.
