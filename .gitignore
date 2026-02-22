@@ -9,8 +9,8 @@ __pycache__/
 checkpoints/*.pt
 checkpoints/*.engine
 
-# Training outputs
+# Training outputs (directory and all contents recursively)
 runs/
 
-# Datasets
-datasets/**
+# Datasets (directory and all contents recursively)
+datasets/
