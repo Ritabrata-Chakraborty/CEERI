@@ -1,0 +1,22 @@
+# Conda environment for Tree Line Follower on Jetson 5 (Orin / JetPack 6).
+# Python 3.10 matches JetPack 6. After creating the env, run scripts/setup_jetson5_env.sh
+# to install PyTorch from NVIDIA wheels and then pip dependencies.
+#
+# On Jetson (aarch64), use Miniconda aarch64:
+#   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
+#   bash Miniconda3-latest-Linux-aarch64.sh
+#
+# Create and setup:
+#   conda env create -f environment-jetson5.yml
+#   conda activate tree-line-follower-jetson5
+#   bash scripts/setup_jetson5_env.sh
+
+name: tree-line-follower-jetson5
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - pip

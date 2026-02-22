@@ -1,0 +1,18 @@
+# Tree Line Follower - Jetson 5 (Orin / JetPack 6) - Dependencies
+# Install after creating conda env and installing PyTorch from NVIDIA (see scripts/setup_jetson5_env.sh).
+# torch/torchvision are NOT listed here; install from NVIDIA Jetson wheels first.
+
+# Core (versions with aarch64 wheels; numpy 1.26.x recommended for PyTorch on Jetson)
+numpy>=1.26,<3.0
+opencv-python-headless>=4.5,<5.0
+scipy>=1.7,<2.0
+numba>=0.58
+matplotlib>=3.5,<4.0
+
+# YOLO (ultralytics) - install after PyTorch; deps required by ultralytics
+psutil
+pyyaml>=5.3.1
+ultralytics>=8.0,<9.0
+
+# Optional: for scripts/train.py --roboflow-key
+roboflow>=1.1
