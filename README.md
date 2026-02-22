@@ -82,18 +82,18 @@ Config: `src/config.py` — e.g. `TRACK_IOU_THRESHOLD`, `IMG_WIDTH`, `IMG_HEIGHT
 
 ```
 ├── src/
-│   ├── config.py          # Paths, IMG size, TRACK_IOU_THRESHOLD
-│   ├── inference.py       # run_yolo, run_yolo_ui (YOLO + NMS + tracking + control)
-│   ├── tracking.py        # Kalman + IoU-based track_bbox
-│   ├── control.py         # control_drone (yaw/roll)
-│   └── post_processing.py # NMS, morphology, center-line fit
+│   ├── config.py           # Paths, IMG size, TRACK_IOU_THRESHOLD
+│   ├── inference.py        # run_yolo, run_yolo_ui (YOLO + NMS + tracking + control)
+│   ├── tracking.py         # Kalman + IoU-based track_bbox
+│   ├── control.py          # control_drone (yaw/roll)
+│   └── post_processing.py  # NMS, morphology, center-line fit
 ├── scripts/
-│   ├── run_inference.py    # Entry point (--ui, --video, --class-id)
-│   ├── train.py           # Train YOLO segment model
-│   ├── export_tensorrt.py # .pt → TensorRT
+│   ├── run_inference.py     # Entry point (--ui, --video, --class-id)
+│   ├── train.py             # Train YOLO segment model
+│   ├── export_tensorrt.py   # .pt → TensorRT
 │   └── setup_jetson5_env.sh
-├── checkpoints/            # Model weights (.pt)
-├── datasets/               # Training data / video
+├── checkpoints/             # Model weights (.pt)
+├── datasets/                # Training data / video
 ├── requirements.txt
 └── environment-jetson5.yml
 ```
