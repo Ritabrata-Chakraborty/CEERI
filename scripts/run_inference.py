@@ -89,11 +89,22 @@ def main():
         print(f"Available classes: {names}", file=sys.stderr)
         sys.exit(1)
 
-    video_src = int(args.video) if args.video.isdigit() else args.video
-    cap = cv2.VideoCapture(video_src)
-    if not cap.isOpened():
-        print(f"Failed to open video/camera: {args.video}")
-        sys.exit(1)
+    video_src = args.video
+
+    # normal webcam index
+    if video_src.isdigit():
+        cap = cv2.VideoCapture(int(video_src))
+    
+    # gstreamer pipeline
+    elif "!" in video_src:
+        cap = cv2.VideoCapture(video_src, cv2.CAP_GSTREAMER)
+    
+    # video file
+    else:
+        cap = cv2.VideoCapture(video_src)
+        if not cap.isOpened():
+            print(f"Failed to open video/camera: {args.video}")
+            sys.exit(1)
 
     if args.ui:
         _run_ui_with_suppressed_qt_stderr(cap, model, args.class_id)
