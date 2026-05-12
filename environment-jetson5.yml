@@ -11,7 +11,7 @@
 #   conda activate tree-line-follower-jetson5
 #   bash scripts/setup_jetson5_env.sh
 
-name: tree-line-follower-jetson5
+name: trail-jetson5
 
 channels:
   - conda-forge
